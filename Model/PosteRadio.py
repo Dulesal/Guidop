@@ -1,9 +1,13 @@
 class PosteRadio:
     __auditeur = None
     __messageEntendu = ""
+    __observer = None
 
     def __init__(self, message):
         self.__messageEntendu = message
 
-    def listen(self):
-        self.__auditeur
+    def setChanged(self, vue):
+        self.__observer.update(vue)
+
+    def addObserver(self, observer):
+        self.__observer = observer

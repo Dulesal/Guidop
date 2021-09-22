@@ -9,7 +9,7 @@ class RadioController:
         self.__stationRadio = StationRadio
 
     def run(self):
-        return True
+        self.startBroadcast()
 
     def startBroadcast(self):
         self.__stationRadio.diffuserMessage()
