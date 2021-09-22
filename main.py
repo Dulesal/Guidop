@@ -3,8 +3,6 @@ from Model.PosteRadio import PosteRadio
 from Model.StationRadio import StationRadio
 from View.PosteRadioView import PosteRadioView
 from Model.Resistant import Resistant
-from View.StationRadioView import StationRadioView
-
 
 def main():
 
@@ -18,21 +16,16 @@ def main():
     resistant.append(resistant2)
     resistant.append(resistant3)
 
-    modelPosteRadio = PosteRadio()
+    modelPosteRadio = PosteRadio("désespérés")
     viewPosteRadio = PosteRadioView()
     modelPosteRadio.addObserver(viewPosteRadio)
 
     modelStationRadio = StationRadio("BBC", resistant)
-    viewStationRadio = StationRadioView()
-    modelStationRadio.addObserver(viewStationRadio)
 
     controller = RadioController()
     controller.addStationRadio(modelStationRadio)
     controller.addPosteRadio(modelPosteRadio)
     controller.run()
-
-
-
 
 if __name__ == '__main__':
     main()

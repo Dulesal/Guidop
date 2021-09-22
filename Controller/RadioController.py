@@ -12,4 +12,5 @@ class RadioController:
         self.startBroadcast()
 
     def startBroadcast(self):
-        self.__stationRadio.diffuserMessage()
+        for poste in self.__posteRadio:
+            poste.setChanged(self.__stationRadio.diffuserMessage())
