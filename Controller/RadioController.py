@@ -12,4 +12,4 @@ class RadioController:
         return True
 
     def startBroadcast(self):
-        self.__stationRadio.get
+        self.__stationRadio.diffuserMessage()
