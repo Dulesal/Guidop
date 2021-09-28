@@ -8,7 +8,6 @@ class PosteRadioView:
         elif (fonction == "etat"):
             self.setRadioState(var)
 
-
     def afficherMessage(self, message):
         if (self.__radioState):
             print(f"\033[92m{message}\033[0m")
@@ -22,5 +21,3 @@ class PosteRadioView:
             else:
                 print("The radio turns off ...")
                 time.sleep(1)
-
-        print(f"")

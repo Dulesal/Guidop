@@ -1,5 +1,8 @@
+from Model.StationRadio import StationRadio
+
+
 class RadioController:
-    __stationRadio = None
+    __stationRadio: StationRadio
     __posteRadio = []
 
     def addPosteRadio(self, PosteRadio):
@@ -12,7 +15,14 @@ class RadioController:
         self.startBroadcast()
 
     def startBroadcast(self):
+        message = self.__stationRadio.diffuserMessage()
+        self.__stationRadio.setChanged(True)
+        self.__stationRadio.notifyObserver(message)
+
         for poste in self.__posteRadio:
-            poste.setChanged("etat", True)
-            poste.setChanged("message", self.__stationRadio.diffuserMessage())
-            poste.setChanged("etat", False)
+            poste.setChanged(True)
+            poste.notifyObserver("etat", True)
+            poste.setChanged(True)
+            poste.notifyObserver("message", message)
+            poste.setChanged(True)
+            poste.notifyObserver("etat", False)

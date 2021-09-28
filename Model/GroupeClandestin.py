@@ -1,7 +1,6 @@
 from Model import SaboteurFerroviaire
 from Model.PosteRadio import PosteRadio
 
-
 class GroupeClandestin:
     __nom: str
     __posteRadio: PosteRadio
