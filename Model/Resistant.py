@@ -1,13 +1,13 @@
 class Resistant:
-    __name = ""
+    __nom = ""
     __parole = ""
 
-    def __init__(self, name, parole):
-        self.__name = name
+    def __init__(self, nom, parole):
+        self.__nom = nom
         self.__parole = parole
 
-    def getName(self):
-        return self.__name
+    def getNom(self):
+        return self.__nom
 
     def getParole(self):
         return self.__parole

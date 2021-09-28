@@ -6,8 +6,8 @@ class PosteRadio:
     def __init__(self, message):
         self.__messageEntendu = message
 
-    def setChanged(self, paroleStationRadio):
-        self.__observer.update("message", paroleStationRadio)
+    def setChanged(self, fonction , var):
+        self.__observer.update(fonction, var)
 
     def addObserver(self, observer):
         self.__observer = observer

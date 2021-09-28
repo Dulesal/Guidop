@@ -2,11 +2,11 @@ import time
 import random
 class StationRadio:
     __radio = None
-    __name = ""
+    __nom = ""
     __resistant = []
 
-    def __init__(self, name, resistant):
-        self.__name = name
+    def __init__(self, nom, resistant):
+        self.__nom = nom
         self.__resistant = resistant
 
     def setChanged(self, message):

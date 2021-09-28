@@ -13,4 +13,6 @@ class RadioController:
 
     def startBroadcast(self):
         for poste in self.__posteRadio:
-            poste.setChanged(self.__stationRadio.diffuserMessage())
+            poste.setChanged("etat", True)
+            poste.setChanged("message", self.__stationRadio.diffuserMessage())
+            poste.setChanged("etat", False)
